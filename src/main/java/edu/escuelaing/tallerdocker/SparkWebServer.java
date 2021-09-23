@@ -44,11 +44,12 @@ public class SparkWebServer {
         DBCollection collection= database.getCollection("cadenas");
         DBObject cadenaAGuardar= new BasicDBObject("cadena",cadena);
         collection.insert(cadenaAGuardar);
-        return false;
+        return true;
     }
     private static JSONObject logServiceResponse(Request req, Response res){
         res.type("application/json");
         String cadena= req.queryParams("cadena");
+        dataBaseSave(cadena);
         return null;
     }
 

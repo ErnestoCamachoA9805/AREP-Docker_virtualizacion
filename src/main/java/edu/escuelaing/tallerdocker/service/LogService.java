@@ -21,10 +21,12 @@ public class LogService implements LogServiceInterface{
     public LogService(){
         mongoSetup();
     }
-
+    /**
+     * Realiza la coneccion a la base de datos 
+     */
     private static void mongoSetup(){
         try {
-            mongoClient = new MongoClient(new MongoClientURI("mongodb://localhost:27017"));
+            mongoClient = new MongoClient(new MongoClientURI("mongodb://ec2-34-227-27-85.compute-1.amazonaws.com:27017"));
             database= mongoClient.getDB("cadenas");
             collection= database.getCollection("cadenas");
         } catch (UnknownHostException e) {
@@ -32,6 +34,11 @@ public class LogService implements LogServiceInterface{
         }
     }
 
+    /**
+     * recibe una cadena y retorna las ultimas 10 cadenas de la base de datos 
+     * @param cadena 
+     * @return lista de objetos 
+     */
     public List<DBObject> saveData(String cadena){
         List<DBObject> response = new ArrayList<>();
         collection.insert(new BasicDBObject("data", cadena).append("date", new Date()));

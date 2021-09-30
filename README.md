@@ -9,15 +9,15 @@
 >>
 >> Imagenes montadas en la maquina aws:
 >>
->> ![] imagen 
+>> ![](https://github.com/ErnestoCamachoA9805/AREP-Docker_virtualizacion/blob/main/Recursos/imagenesmontadas.PNG)
 >>
 >> El proyecto se probo de manera local 
 >>
->> ![] imagen
+>> ![](https://github.com/ErnestoCamachoA9805/AREP-Docker_virtualizacion/blob/main/Recursos/Prueba%20local.PNG)
 >>
 >> El proyecto en la maquina de aws
 >>
->> ![] imagen
+>> ![](https://github.com/ErnestoCamachoA9805/AREP-Docker_virtualizacion/blob/main/Recursos/Prueba%20aws.PNG)
 >>
 >> El proyecto recibe una palabra y responde las 10 ultimas cadenas de la base de datos.
 >>
